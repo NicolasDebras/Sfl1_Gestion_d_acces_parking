@@ -14,14 +14,28 @@ using System.Windows.Shapes;
 
 namespace APP_C_PARKING
 {
-    /// <summary>
-    /// Logique d'interaction pour delete_user.xaml
-    /// </summary>
-    public partial class delete_user : Window
+    public partial class Delete_user : Window
     {
-        public delete_user()
+        //nom 
+        string frist_name;
+        //prénom de famille
+        string name;
+        public Delete_user()
         {
             InitializeComponent();
+        }
+
+        //cancel
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            frist_name = Txt_first_name.Text;
+            name = Txt_name.Text;
+            this.Close();
         }
     }
 }

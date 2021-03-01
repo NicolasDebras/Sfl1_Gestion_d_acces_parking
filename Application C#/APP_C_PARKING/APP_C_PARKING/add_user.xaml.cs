@@ -17,9 +17,9 @@ namespace APP_C_PARKING
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Add_user : Window
     {
-        public Window1()
+        public Add_user()
         {
             InitializeComponent();
         }

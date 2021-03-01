@@ -13,11 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/*
+ *  SFL1_project  
+ *  Nicolas Debras 
+ * 
+ */
+
 namespace APP_C_PARKING
 {
-    /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
-    /// </summary>
+ 
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -25,7 +29,21 @@ namespace APP_C_PARKING
             InitializeComponent();
         }
 
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            Add_user add = new Add_user();
+            add.ShowDialog();
+        }
+
+        //button delete 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Delete_user delete = new Delete_user();
+            delete.ShowDialog();
+        }
+
+        //button refresh
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
         }

@@ -1,4 +1,4 @@
-﻿<Window x:Class="APP_C_PARKING.delete_user"
+﻿<Window x:Class="APP_C_PARKING.Delete_user"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -8,12 +8,12 @@
         Title="Supression/Suspension" Height="450" Width="300
         ">
     <Grid>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="68,363,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Annuler" HorizontalAlignment="Left" Margin="167,363,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="add" Content="Ajouter" HorizontalAlignment="Left" Margin="68,363,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
+        <Button x:Name="delete" Content="Annuler" HorizontalAlignment="Left" Margin="167,363,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Label Content="Nom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,46,0,0"/>
         <Label Content="Prénom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,93,0,0"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,50,0,0" TextWrapping="Wrap" Text="le nom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,97,0,0" TextWrapping="Wrap" Text="prénom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <TextBox x:Name="Txt_first_name" HorizontalAlignment="Left" Height="23" Margin="122,50,0,0" TextWrapping="Wrap" Text="le nom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <TextBox x:Name="Txt_name" HorizontalAlignment="Left" Height="23" Margin="122,97,0,0" TextWrapping="Wrap" Text="prénom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
         <CheckBox Content="Supression" HorizontalAlignment="Left" Margin="72,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.362,1.403"/>
         <CheckBox Content="Suspension" HorizontalAlignment="Left" Margin="171,320,0,0" VerticalAlignment="Top"/>
 
