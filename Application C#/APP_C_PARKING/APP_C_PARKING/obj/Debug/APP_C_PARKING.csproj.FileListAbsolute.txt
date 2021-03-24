@@ -31,3 +31,13 @@ C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#
 C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\APP_C_PARKING.csproj.CoreCompileInputs.cache
 C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\APP_C_PARKING.exe
 C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\APP_C_PARKING.pdb
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\Delete_user.g.cs
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\Add_user.g.cs
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\Delete_user.baml
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\Add_user.baml
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\MySql.Data.dll
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\Google.Protobuf.dll
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\Renci.SshNet.dll
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\MySql.Data.xml
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\APP_C_PARKING.csproj.CopyComplete

@@ -27,14 +27,16 @@ namespace APP_C_PARKING
         public MainWindow()
         {
             InitializeComponent();
+            Connexion connexion_sql = new Connexion();
+            Label_nom.Content = connexion_sql.recup_info_badge();
         }
-
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            Add_user add = new Add_user();
-            add.ShowDialog();
+            Add_user add_user = new Add_user();
+            add_user.ShowDialog();
+            
         }
-
+        
         //button delete 
         private void Button_Click(object sender, RoutedEventArgs e)
         {

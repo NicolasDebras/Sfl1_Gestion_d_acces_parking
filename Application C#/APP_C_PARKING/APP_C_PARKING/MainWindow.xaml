@@ -21,14 +21,15 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="72,147,0,0" VerticalAlignment="Top" Width="287"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="182" Margin="72,172,0,0" VerticalAlignment="Top" Width="287"/>
         <StackPanel HorizontalAlignment="Left" Height="181" Margin="72,172,0,0" VerticalAlignment="Top" Width="287"/>
-        <Label Content="TEST                     DUPONT                 54500550545" HorizontalAlignment="Left" Height="29" Margin="72,177,0,0" VerticalAlignment="Top" Width="287"/>
-        <Button x:Name="add"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="476,188,0,0" FontFamily="Open SANS" Height="100" BorderBrush="#FFF9F9F9" Click="add_Click">
+        <Label x:Name="Label_nom" Content="TEST                     DUPONT                 54500550545" HorizontalAlignment="Left" Height="29" Margin="72,177,0,0" VerticalAlignment="Top" Width="287"/>
+        <Button x:Name="add"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="476,188,0,0" FontFamily="Open SANS" Height="100" BorderBrush="#FFF9F9F9" Click="add_Click" Cursor="Arrow">
             <Button.Background>
                 <ImageBrush ImageSource="add-user.png"/>
             </Button.Background>
         </Button>
         <Label Content="UTILISATEUR&#xD;&#xA;" HorizontalAlignment="Left" Height="43" Margin="72,76,0,0" VerticalAlignment="Top" Width="287" FontWeight="Bold" FontSize="28" FontFamily="Open SANS"/>
-        <Button Content="RESERVATION PLACE" HorizontalAlignment="Left" Margin="511,52,0,0" VerticalAlignment="Top" Width="204" Height="38" Click="Button_Click" BorderBrush="#FF104222" Foreground="Black" Background="#FFDADADA"/>
+        <Button x:Name="btReservation" Content="RESERVATION PLACE" HorizontalAlignment="Left" Margin="511,0,0,328" VerticalAlignment="Bottom" Width="204" Height="38" Click="Button_Click" BorderBrush="#FF104222" Foreground="Black" Background="#FFDADADA">
+        </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="334,117,0,0" VerticalAlignment="Top" Width="25" Height="25" BorderBrush="White" Click="Button_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="refresh.png"/>
