@@ -24,15 +24,17 @@ namespace APP_C_PARKING
  
     public partial class MainWindow : Window
     {
+        private Connexion connexion_sql;
         public MainWindow()
         {
             InitializeComponent();
-            Connexion connexion_sql = new Connexion();
+            connexion_sql = new Connexion();
             Label_nom.Content = connexion_sql.recup_info_badge();
+            
         }
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            Add_user add_user = new Add_user();
+            Add_user add_user = new Add_user(connexion_sql);
             add_user.ShowDialog();
             
         }

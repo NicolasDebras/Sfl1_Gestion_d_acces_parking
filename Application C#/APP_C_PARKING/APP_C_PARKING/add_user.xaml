@@ -8,14 +8,14 @@
         Title="Ajouter utilisateur" Height="450" Width="300
         ">
     <Grid>
-        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="68,363,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ajouter" HorizontalAlignment="Left" Margin="68,363,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="Annuler" HorizontalAlignment="Left" Margin="167,363,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Nom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,46,0,0"/>
         <Label Content="Prénom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,93,0,0"/>
         <Label Content="Badge :" HorizontalAlignment="Left" Margin="35,146,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,50,0,0" TextWrapping="Wrap" Text="le nom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,97,0,0" TextWrapping="Wrap" Text="prénom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="122,146,0,0" TextWrapping="Wrap" Text="numéro badge" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <TextBox x:Name="nom_textBox" HorizontalAlignment="Left" Height="23" Margin="122,50,0,0" TextWrapping="Wrap" Text="le nom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <TextBox x:Name="TextBox_prenom" HorizontalAlignment="Left" Height="23" Margin="122,97,0,0" TextWrapping="Wrap" Text="prénom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <TextBox x:Name="TextBox_badge" HorizontalAlignment="Left" Height="23" Margin="122,146,0,0" TextWrapping="Wrap" Text="numéro badge" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
 
     </Grid>
 </Window>

@@ -11,17 +11,45 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace APP_C_PARKING
 {
     /// <summary>
     /// Logique d'interaction pour Window1.xaml
     /// </summary>
+
+    
+
     public partial class Add_user : Window
     {
-        public Add_user()
+
+        private Connexion connexion;
+
+        public Add_user(Connexion connexion)
         {
             InitializeComponent();
+            this.connexion = connexion;
+        }
+
+        //fonction_bouton qui correspond pour ajouter un utilisateur
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string nom = nom_textBox.Text;
+            string prenom = TextBox_prenom.Text;
+            string badge = TextBox_badge.Text;
+
+            if (connexion.verification(badge) == true)
+            {
+                connexion.add_user(nom, prenom, badge, "");
+                this.Close();
+
+            }
+            else {
+
+                System.Windows.Forms.MessageBox.Show("NUMERO DE BADGE INDENTIQUE");
+            }
+            
         }
     }
 }
