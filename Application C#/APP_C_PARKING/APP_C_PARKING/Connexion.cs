@@ -58,8 +58,6 @@ namespace APP_C_PARKING
                 cmd.Parameters.Add("@nom", MySqlDbType.String).Value = nom;
                 cmd.Parameters.Add("@prenom", MySqlDbType.String).Value = prenom;
                 cmd.Parameters.Add("@badge", MySqlDbType.String).Value = badge;
-                //a modifier 
-                role = "users";
                 cmd.Parameters.Add("@role", MySqlDbType.String).Value = role;
                 cmd.Parameters.Add("@etat", MySqlDbType.VarChar).Value = 1;
 

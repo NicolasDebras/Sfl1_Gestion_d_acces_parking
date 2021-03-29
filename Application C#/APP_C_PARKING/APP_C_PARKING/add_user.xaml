@@ -16,6 +16,7 @@
         <TextBox x:Name="nom_textBox" HorizontalAlignment="Left" Height="23" Margin="122,50,0,0" TextWrapping="Wrap" Text="le nom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
         <TextBox x:Name="TextBox_prenom" HorizontalAlignment="Left" Height="23" Margin="122,97,0,0" TextWrapping="Wrap" Text="prénom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
         <TextBox x:Name="TextBox_badge" HorizontalAlignment="Left" Height="23" Margin="122,146,0,0" TextWrapping="Wrap" Text="numéro badge" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <CheckBox x:Name="roles_CheckBox" Content="Admin" HorizontalAlignment="Left" Margin="122,258,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

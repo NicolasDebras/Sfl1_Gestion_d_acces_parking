@@ -34,7 +34,7 @@ namespace APP_C_PARKING
         private void add_Click(object sender, RoutedEventArgs e)
         {
             frist_name = Txt_first_name.Text;
-            name = Txt_name.Text;
+            name = Txt_name.Text;   
             this.Close();
         }
     }

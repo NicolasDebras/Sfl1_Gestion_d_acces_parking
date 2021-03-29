@@ -38,12 +38,16 @@ namespace APP_C_PARKING
             string nom = nom_textBox.Text;
             string prenom = TextBox_prenom.Text;
             string badge = TextBox_badge.Text;
+            string role = "users";
 
-            if (connexion.verification(badge) == true)
-            {
-                connexion.add_user(nom, prenom, badge, "");
+            if (roles_CheckBox.IsChecked == true) {
+                role = "admin";
+            }
+
+            if (connexion.verification(badge) == true) {
+
+                connexion.add_user(nom, prenom, badge, role);
                 this.Close();
-
             }
             else {
 
