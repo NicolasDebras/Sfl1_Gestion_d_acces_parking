@@ -1,0 +1,61 @@
+@media (min-width: 480px) and (max-width: 780px)
+{
+    
+}
+
+@media (min-width: 780px) and (max-width: 979px)
+{
+    
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+}
+
+header.page-header {
+    display: flex;
+    height: 120px;
+    min-width: 120px;
+    align-items: center;
+    
+    color: #e1e1e1;
+    background: #aaaaaa;
+    text-shadow: #000 0 0 .2em;
+}
+
+header.page-header > h1 {
+    font: bold calc(1em + 2 * (100vw - 400px) / 100) 'Dancing Script', cursive,
+        fantasy;
+    margin: 24%;
+}
+
+main {
+    font-family: 'Fira Sans', sans-serif;
+    
+}
+
+.titre
+{
+    background: #e1e1e1;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}   
+
+.t1
+{
+    font-family: 'verdana', sans-serif;
+}
+
+.position
+{
+    position: relative;
+    right: 20px;
+    left: 20px;
+}
