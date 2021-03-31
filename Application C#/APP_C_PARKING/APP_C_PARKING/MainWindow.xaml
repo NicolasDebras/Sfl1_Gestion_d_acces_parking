@@ -28,13 +28,12 @@
             </Button.Background>
         </Button>
         <Label Content="UTILISATEUR&#xD;&#xA;" HorizontalAlignment="Left" Height="43" Margin="72,76,0,0" VerticalAlignment="Top" Width="287" FontWeight="Bold" FontSize="28" FontFamily="Open SANS"/>
-        <Button x:Name="btReservation" Content="RESERVATION PLACE" HorizontalAlignment="Left" Margin="511,0,0,328" VerticalAlignment="Bottom" Width="204" Height="38" Click="Button_Click" BorderBrush="#FF104222" Foreground="Black" Background="#FFDADADA">
-        </Button>
         <Button Content="" HorizontalAlignment="Left" Margin="334,117,0,0" VerticalAlignment="Top" Width="25" Height="25" BorderBrush="White" Click="Button_Click_1">
             <Button.Background>
                 <ImageBrush ImageSource="refresh.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="Button_reversation" Content="RESERVATION" HorizontalAlignment="Left" Margin="545,87,0,0" VerticalAlignment="Top" Width="208" Click="Button_Click_2" Height="32"/>
 
     </Grid>
 </Window>

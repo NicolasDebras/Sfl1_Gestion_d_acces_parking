@@ -108,6 +108,10 @@ namespace APP_C_PARKING
                 System.Windows.Forms.MessageBox.Show("MUNERO DE BADGE PAS CORRECT");
             }
         }
+        public void reservation(DateTime date, string badge)
+        {
+
+        }
     }
  
 }
