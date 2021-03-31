@@ -22,6 +22,7 @@ namespace APP_C_PARKING
             this.connexion = new MySqlConnection(connexionString);
             this.connexion.Open();
             list_badge = new List<string>();
+            
 
         }
         public string recup_info_badge()
@@ -81,5 +82,32 @@ namespace APP_C_PARKING
             }
             return true;
         }
+        public void delete_user(string badge)
+        {
+            try
+            {
+                string query = "DELETE FROM `utilisateur` WHERE `utilisateur`.`badge` = "+badge+"";
+                MySqlCommand cmd = new MySqlCommand(query, connexion);
+                int test = cmd.ExecuteNonQuery();
+            }
+            catch(Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("MUNERO DE BADGE PAS CORRECT");
+            }
+        }
+        public void suspension(string badge)
+        {
+            try
+            {
+                string query = "UPDATE `utilisateur` SET `etat` = '0' WHERE `utilisateur`.`badge` = "+badge+""; 
+                MySqlCommand cmd = new MySqlCommand(query, connexion);
+                int test = cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                System.Windows.Forms.MessageBox.Show("MUNERO DE BADGE PAS CORRECT");
+            }
+        }
     }
+ 
 }

@@ -44,7 +44,7 @@ namespace APP_C_PARKING
                 role = "admin";
             }
 
-            if (connexion.verification(badge) == true) {
+            if (badge != "" && connexion.verification(badge) == true) {
 
                 connexion.add_user(nom, prenom, badge, role);
                 this.Close();
