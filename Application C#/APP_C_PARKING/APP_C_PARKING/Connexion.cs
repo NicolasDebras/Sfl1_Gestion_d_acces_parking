@@ -13,6 +13,8 @@ namespace APP_C_PARKING
         private MySqlConnection connexion;
         private string user;
         private  List<string> list_badge;
+        private  List<string> list_user;
+        private List<string> list_id;
 
         public Connexion()
         {
@@ -22,6 +24,8 @@ namespace APP_C_PARKING
             this.connexion = new MySqlConnection(connexionString);
             this.connexion.Open();
             list_badge = new List<string>();
+            list_user = new List<string>();
+            list_id = new List<string>();
             
 
         }
@@ -38,10 +42,12 @@ namespace APP_C_PARKING
 
             while (dataReader.Read()) {
 
+                list_id.Add(dataReader["id"] + "");
                 name = dataReader["nom"] + "";
                 prenom = dataReader["prenom"] + "";
                 list_badge.Add(dataReader["badge"] + "");
                 user = name + "                     " + prenom + "                 " + list_badge[i];
+                list_user.Add(name + " | " + prenom + " | " + list_badge[i]);
                 i = i + 1;
             }
             dataReader.Close();
@@ -110,7 +116,20 @@ namespace APP_C_PARKING
         }
         public void reservation(DateTime date, string badge)
         {
-
+            int i = 0;
+            while (list_user.Count != i)
+            {
+                if (list_user[i].EndsWith(badge))
+                {
+                    System.Windows.Forms.MessageBox.Show("JE SUIS PIXEL");
+                } else
+                    System.Windows.Forms.MessageBox.Show("JE SUIS PAS PIXEL");
+                i = i + 1;
+            }
+        }
+        public List<string> getListUser()
+        {
+            return list_user;
         }
     }
  
