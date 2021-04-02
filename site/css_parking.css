@@ -55,7 +55,40 @@ main {
 
 .position
 {
-    position: relative;
-    right: 20px;
-    left: 20px;
+
+}
+
+.position p1
+{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+}
+
+.test 
+{
+    
+}
+
+.test img
+{
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    z-index: 1;
+    
+}
+
+.test2
+{
+    
+}
+
+.test2 text
+{
+    font-size: 50%;
+}
+
+.style{
+    color: red;
 }
