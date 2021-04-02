@@ -17,11 +17,11 @@ namespace APP_C_PARKING
     public partial class Delete_user : Window
     {
         //nom 
-        string frist_name;
-        //prénom de famille
-        string name;
-        public Delete_user()
+        string badge;
+        private Connexion connexion;
+        public Delete_user(Connexion connexion)
         {
+            this.connexion = connexion;
             InitializeComponent();
         }
 
@@ -30,12 +30,27 @@ namespace APP_C_PARKING
         {
             this.Close();
         }
-
+        //fonction button qui correspond a "ok"
         private void add_Click(object sender, RoutedEventArgs e)
         {
-            frist_name = Txt_first_name.Text;
-            name = Txt_name.Text;   
+            badge = Txt_first_name.Text;
+
+            if (CheckBox_delete.IsChecked == true && CheckBox_suspension.IsChecked == true)
+                System.Windows.Forms.MessageBox.Show("SELECTION ERRONE");
+            else if (CheckBox_suspension.IsChecked == true) 
+                connexion.suspension(badge);
+            else if (CheckBox_delete.IsChecked == true)
+                connexion.delete_user(badge);
+            else 
+                System.Windows.Forms.MessageBox.Show("AUCUNE SELECTION");
+
+            
             this.Close();
+        }
+
+        private void CheckBox_suspension_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

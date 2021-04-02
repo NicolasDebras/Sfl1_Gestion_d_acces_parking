@@ -42,7 +42,7 @@ namespace APP_C_PARKING
         //button delete 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Delete_user delete = new Delete_user();
+            Delete_user delete = new Delete_user(connexion_sql);
             delete.ShowDialog();
         }
 
@@ -50,6 +50,13 @@ namespace APP_C_PARKING
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+        //button reversation
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+           
+            Revervation revervation = new Revervation(connexion_sql);
+            revervation.ShowDialog();
         }
     }
 }

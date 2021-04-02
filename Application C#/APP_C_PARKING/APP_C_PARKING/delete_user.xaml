@@ -10,12 +10,10 @@
     <Grid>
         <Button x:Name="add" Content="Ajouter" HorizontalAlignment="Left" Margin="68,363,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
         <Button x:Name="delete" Content="Annuler" HorizontalAlignment="Left" Margin="167,363,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Label Content="Nom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,46,0,0"/>
-        <Label Content="Prénom :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,93,0,0"/>
-        <TextBox x:Name="Txt_first_name" HorizontalAlignment="Left" Height="23" Margin="122,50,0,0" TextWrapping="Wrap" Text="le nom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
-        <TextBox x:Name="Txt_name" HorizontalAlignment="Left" Height="23" Margin="122,97,0,0" TextWrapping="Wrap" Text="prénom" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
-        <CheckBox Content="Supression" HorizontalAlignment="Left" Margin="72,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.362,1.403"/>
-        <CheckBox Content="Suspension" HorizontalAlignment="Left" Margin="171,320,0,0" VerticalAlignment="Top"/>
+        <Label Content="Badge :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,154,0,0"/>
+        <TextBox x:Name="Txt_first_name" HorizontalAlignment="Left" Height="23" Margin="131,157,0,0" TextWrapping="Wrap" Text="n° badge" VerticalAlignment="Top" Width="120" FontStyle="Italic"/>
+        <CheckBox x:Name="CheckBox_delete" Content="Supression" HorizontalAlignment="Left" Margin="72,320,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.362,1.403"/>
+        <CheckBox x:Name="CheckBox_suspension" Content="Suspension" HorizontalAlignment="Left" Margin="171,320,0,0" VerticalAlignment="Top" Checked="CheckBox_suspension_Checked"/>
 
     </Grid>
 </Window>
