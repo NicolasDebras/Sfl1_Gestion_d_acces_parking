@@ -40,12 +40,12 @@ namespace APP_C_PARKING
 
         private void Button_ok_Click(object sender, RoutedEventArgs e)
         {
-            if (ComboBox_user.Text != "" && DateP.SelectedDate.Value != ) {
+            if (ComboBox_user.Text != "") {
                 connexion.reservation(DateP.SelectedDate.Value, ComboBox_user.Text);
                 this.Close();
             }
             else 
-                System.Windows.Forms.MessageBox.Show("JE SUIS PIXEL");
+                System.Windows.Forms.MessageBox.Show("ERREUR DANS LA SAISIE");
         }
     }
 }

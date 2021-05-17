@@ -19,14 +19,20 @@ namespace APP_C_PARKING
         public Connexion()
         {
 
-            String connexionString = "SERVER=127.0.0.1; DATABASE=parking; UID=root; PASSWORD="; ;
+            String connexionString = "SERVER=127.0.0.1; DATABASE=parking; UID=root; PASSWORD="; 
 
-            this.connexion = new MySqlConnection(connexionString);
-            this.connexion.Open();
-            list_badge = new List<string>();
-            list_user = new List<string>();
-            list_id = new List<string>();
-            
+            try
+            {
+                this.connexion = new MySqlConnection(connexionString);
+                this.connexion.Open();
+                list_badge = new List<string>();
+                list_user = new List<string>();
+                list_id = new List<string>();
+            } catch (Exception e) {
+
+                Console.WriteLine("Error: " + e);
+                Console.WriteLine(e.StackTrace);
+            }
 
         }
         public string recup_info_badge()

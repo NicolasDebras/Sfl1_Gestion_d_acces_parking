@@ -5,35 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:APP_C_PARKING"
         mc:Ignorable="d"
-        Title="Menu" Height="450" Width="800">
+        Title="Menu" Height="450" Width="800" Icon="logo_parking.png">
+    <Window.Resources>
+        <SolidColorBrush x:Key="Brush1" Color="#FFDDDDDD"/>
+    </Window.Resources>
     <Grid Margin="0,0,-8,1">
+        <Grid.OpacityMask>
+            <ImageBrush ImageSource="rfid.png"/>
+        </Grid.OpacityMask>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="9*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="66*"/>
+            <ColumnDefinition Width="328*"/>
+            <ColumnDefinition Width="112*"/>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="52*"/>
+            <ColumnDefinition Width="123*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="delete" Content="" HorizontalAlignment="Left" Margin="653,188,0,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="White" Click="Button_Click">
+        <Button x:Name="delete" Content="" HorizontalAlignment="Left" Margin="75.4,221,0,0" VerticalAlignment="Top" Width="100" Height="100" BorderBrush="White" Click="Button_Click" RenderTransformOrigin="-0.626,1.174" Grid.Column="5" Grid.ColumnSpan="3">
             <Button.Background>
                 <ImageBrush ImageSource="remove-user.png"/>
             </Button.Background>
         </Button>
-        <Label Content="NOM" HorizontalAlignment="Left" Height="25" Margin="72,147,0,0" VerticalAlignment="Top" Width="51" RenderTransformOrigin="0.648,0.161"/>
-        <Label Content="PRENOM" HorizontalAlignment="Left" Margin="161,147,0,0" VerticalAlignment="Top" Height="26" Width="59"/>
-        <Label Content="BADGE" HorizontalAlignment="Left" Margin="267,147,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.108,0.434" Height="26" Width="47"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="26" Margin="72,147,0,0" VerticalAlignment="Top" Width="287"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="182" Margin="72,172,0,0" VerticalAlignment="Top" Width="287"/>
-        <StackPanel HorizontalAlignment="Left" Height="181" Margin="72,172,0,0" VerticalAlignment="Top" Width="287"/>
-        <Label x:Name="Label_nom" Content="TEST                     DUPONT                 54500550545" HorizontalAlignment="Left" Height="29" Margin="72,177,0,0" VerticalAlignment="Top" Width="287"/>
-        <Button x:Name="add"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="476,188,0,0" FontFamily="Open SANS" Height="100" BorderBrush="#FFF9F9F9" Click="add_Click" Cursor="Arrow">
+        <Button x:Name="add"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Margin="272.2,221,0,0" FontFamily="Open SANS" Height="100" BorderBrush="#FFF9F9F9" Click="add_Click" Cursor="Arrow" Grid.Column="3" Grid.ColumnSpan="2">
             <Button.Background>
                 <ImageBrush ImageSource="add-user.png"/>
             </Button.Background>
         </Button>
-        <Label Content="UTILISATEUR&#xD;&#xA;" HorizontalAlignment="Left" Height="43" Margin="72,76,0,0" VerticalAlignment="Top" Width="287" FontWeight="Bold" FontSize="28" FontFamily="Open SANS"/>
-        <Button Content="" HorizontalAlignment="Left" Margin="334,117,0,0" VerticalAlignment="Top" Width="25" Height="25" BorderBrush="White" Click="Button_Click_1">
+        <Label Content="GESTION PARKING" HorizontalAlignment="Left" Height="43" Margin="25.8,32,0,0" VerticalAlignment="Top" Width="287" FontWeight="Bold" FontSize="28" FontFamily="Open SANS" Grid.Column="2" Grid.ColumnSpan="2"/>
+        <Button x:Name="Button_reversation" Content="RESERVATION" HorizontalAlignment="Left" Margin="32.4,41,0,0" VerticalAlignment="Top" Width="208" Click="Button_Click_2" Height="32" Grid.Column="5" Grid.ColumnSpan="3"/>
+        <Button x:Name="rfid" Content="" HorizontalAlignment="Left" Margin="25.8,221,0,0" VerticalAlignment="Top" Width="169" Height="100" BorderBrush="White" Grid.Column="2" Grid.ColumnSpan="2" Click="rfid_Click">
             <Button.Background>
-                <ImageBrush ImageSource="refresh.png"/>
+                <ImageBrush ImageSource="rfid.png"/>
             </Button.Background>
+            <Button.OpacityMask>
+                <ImageBrush ImageSource="rfid.png" Stretch="UniformToFill"/>
+            </Button.OpacityMask>
         </Button>
-        <Button x:Name="Button_reversation" Content="RESERVATION" HorizontalAlignment="Left" Margin="545,87,0,0" VerticalAlignment="Top" Width="208" Click="Button_Click_2" Height="32"/>
+        <Button x:Name="liste" Grid.ColumnSpan="3" Content="LISTE UTILISATEUR" Grid.Column="5" HorizontalAlignment="Left" Margin="32.4,92,0,0" VerticalAlignment="Top" Width="208" Height="36"/>
 
     </Grid>
 </Window>

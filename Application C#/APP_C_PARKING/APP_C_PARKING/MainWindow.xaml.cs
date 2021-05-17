@@ -28,8 +28,16 @@ namespace APP_C_PARKING
         public MainWindow()
         {
             InitializeComponent();
-            connexion_sql = new Connexion();
-            Label_nom.Content = connexion_sql.recup_info_badge();
+            try {
+                connexion_sql = new Connexion();
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("Error: " + e);
+                Console.WriteLine(e.StackTrace);
+            }
+            
             
         }
         private void add_Click(object sender, RoutedEventArgs e)
@@ -57,6 +65,12 @@ namespace APP_C_PARKING
            
             Revervation revervation = new Revervation(connexion_sql);
             revervation.ShowDialog();
+        }
+
+        private void rfid_Click(object sender, RoutedEventArgs e)
+        {
+            fenetreModbus fenetre = new fenetreModbus();
+            fenetre.ShowDialog();
         }
     }
 }
