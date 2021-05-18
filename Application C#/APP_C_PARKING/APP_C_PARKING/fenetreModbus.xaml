@@ -1,27 +1,22 @@
 ﻿<Window x:Class="APP_C_PARKING.fenetreModbus"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Station RFID OsiSense XG" Height="500" Width="600" MinHeight="500" MinWidth="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Menu via lecture badge" Height="400" Width="500" MinHeight="500" MinWidth="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        <Label Margin="0,56,379.6,0" x:Name="lblStatus" Content="Non connecté" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="10" Foreground="#FF29AC1C"/>
+        <Label Margin="0,8,469.6,0" x:Name="lblStatus" Content="Non connecté" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Top" Panel.ZIndex="10" Foreground="#FF29AC1C"/>
+        <Button Margin="0,39,469.6,0" Name="btnConnecter" Content="Connecter" VerticalAlignment="Top" Click="btnConnecter_Click"/>
 
-        <TextBox Margin="240,60,180,0" Name="txtIP" Height="23" TextWrapping="Wrap" Text="192.168.0.20" VerticalAlignment="Top"/>
-        <Button Margin="430,60,40,0" Name="btnConnecter" Content="Connecter" VerticalAlignment="Top" Click="btnConnecter_Click"/>
-
-        <Label Name="lblBadge" Margin="40,200,40,190" Content="" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Foreground="#FF1838CB" FontSize="48">
+        <Label Name="lblBadge" Margin="226,129,219.6,301.4" Content="" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Foreground="#FF1838CB" FontSize="48">
             <Label.Effect>
                 <DropShadowEffect ShadowDepth="6" BlurRadius="6" Color="#FF292727" Direction="320" Opacity="0.2"/>
             </Label.Effect>
         </Label>
 
-        <Button Name="btnEcrireUnBadge" Margin="180,365,179.6,0" Height="34" Content="Ecrire un badge" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="btnEcrireUnBadge_Click"/>
-
-        <StackPanel Name="spEcrire" Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="40,325,40,0" VerticalAlignment="Top">
-            <TextBox Name="txtMessage" HorizontalAlignment="Left" Height="23" Margin="0,0,0,0" Width="295" TextWrapping="Wrap"/>
-            <Button Name="btnWrite" Content="Valider" HorizontalAlignment="Left" Margin="10,0,0,0" Width="100" Click="btnWrite_Click"/>
-            <Button Name="btnAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="10,0,0,0" Width="80" Click="btnAnnuler_Click"/>
-        </StackPanel>
+        <StackPanel Name="spEcrire" Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="40,325,40,0" VerticalAlignment="Top"/>
 
         <Label Name="lblErreur" Margin="0,0,0,40" Content="-" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Height="26" VerticalAlignment="Bottom" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}"/>
+        <Button x:Name="add" Content="Ajouter" HorizontalAlignment="Left" Margin="124,234,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="delete" Content="Suppression" HorizontalAlignment="Left" Margin="266,234,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="suspension" Content="Suspension" HorizontalAlignment="Left" Margin="406,234,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>

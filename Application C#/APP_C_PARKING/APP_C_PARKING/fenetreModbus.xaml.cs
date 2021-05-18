@@ -36,6 +36,8 @@ namespace APP_C_PARKING
 
         protected delegate void Invoker(string message);
 
+        private string IP = "10.16.37.11";
+
         public fenetreModbus()
         {
             InitializeComponent();
@@ -57,8 +59,7 @@ namespace APP_C_PARKING
 
             lblBadge.FontSize = 16;
             lblBadge.Content = "non connecté";
-            lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cccccc"));
-            btnEcrireUnBadge.Visibility = Visibility.Hidden;
+            lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cccccc"));    
             lblErreur.Content = "Indiquez l'adresse IP de votre lecteur RFID puis cliquez sur \"connecter\"";
 
             //connecter();
@@ -80,27 +81,13 @@ namespace APP_C_PARKING
             }
             else
             {
-                ecrireBadge();
                 lireBadge();
-
-                if (badgeMessage == txtMessage.Text)
-                {
-                    write = false;
-                    blank = false;
-
-                    spEcrire.Visibility = Visibility.Hidden;
-                    btnEcrireUnBadge.Content = "Ecrire un badge";
-                    btnEcrireUnBadge.Visibility = Visibility.Visible;
-
-                    txtMessage.Text = "";
-
-                    lblErreur.Content = "Passez un badge devant le lecteur";
-                }
             }
 
             //lblErreur.Content = erreurMessage;
         }
 
+        //btn connexion 
         private void btnConnecter_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -111,15 +98,15 @@ namespace APP_C_PARKING
 
                     if (isConnected)
                     {
-                        txtIP.Visibility = Visibility.Hidden;
+                        
 
-                        lblStatus.Content = "Connexion établie > " + txtIP.Text;
+                        lblStatus.Content = "Connexion établie > " + IP;
                         lblStatus.Visibility = Visibility.Visible;
 
                         btnConnecter.Content = "Déconnecter";
 
                         lblErreur.Content = "Passez un badge devant le lecteur";
-                        btnEcrireUnBadge.Visibility = Visibility.Visible;
+                    
 
                         timer.Start();
                     }
@@ -131,12 +118,11 @@ namespace APP_C_PARKING
                     if (!isConnected)
                     {
                         lblStatus.Visibility = Visibility.Hidden;
-                        txtIP.Visibility = Visibility.Visible;
+                        
 
                         lblBadge.FontSize = 16;
                         lblBadge.Content = "non connecté";
                         lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cccccc"));
-                        btnEcrireUnBadge.Visibility = Visibility.Hidden;
                         lblErreur.Content = "Indiquez l'adresse IP de votre lecteur RFID puis cliquez sur \"connecter\"";
 
                         btnConnecter.Content = "Connecter";
@@ -154,7 +140,7 @@ namespace APP_C_PARKING
             try
             {
                 // Create new modbus master and add event functions
-                MBmaster = new Master(txtIP.Text, 502);
+                MBmaster = new Master(IP, 502);
                 MBmaster.OnResponseData += new ModbusTCP.Master.ResponseData(MBmaster_OnResponseData);
                 MBmaster.OnException += new ModbusTCP.Master.ExceptionData(MBmaster_OnException);
             }
@@ -253,23 +239,6 @@ namespace APP_C_PARKING
             MBmaster.ReadHoldingRegister(ID, unit, StartAddress, Length);
         }
 
-        private void ecrireBadge()
-        {
-            try
-            {
-                byte[] message = Encoding.Default.GetBytes(txtMessage.Text + "\0");
-
-                ushort ID = 1;
-                byte unit = Convert.ToByte("1");
-                ushort StartAddress = Convert.ToUInt16("0x00", 16);
-
-                MBmaster.WriteMultipleRegister(ID, unit, StartAddress, message);
-            }
-            catch
-            {
-                MessageBox.Show("Erreur écriture badge.");
-            }
-        }
 
 
 
@@ -281,64 +250,6 @@ namespace APP_C_PARKING
             ushort hex = Convert.ToUInt16("0x00", 16);
             return hex;
         }
-
-        private void btnEcrireUnBadge_Click(object sender, RoutedEventArgs e)
-        {
-            if (!write)
-            {
-                btnEcrireUnBadge.Visibility = Visibility.Hidden;
-                spEcrire.Visibility = Visibility.Visible;
-                blank = true;
-                lblErreur.Content = "Saisissez le texte à transférer sur le badge puis validez.";
-            }
-            else
-            {
-                spEcrire.Visibility = Visibility.Hidden;
-                btnEcrireUnBadge.Content = "Ecrire un badge";
-                btnEcrireUnBadge.Visibility = Visibility.Visible;
-
-                write = false;
-                blank = false;
-
-                txtMessage.Text = "";
-                badgeMessage = "";
-
-                lblErreur.Content = "Passez un badge devant le lecteur";
-            }
-        }
-
-        private void btnAnnuler_Click(object sender, RoutedEventArgs e)
-        {
-            spEcrire.Visibility = Visibility.Hidden;
-            btnEcrireUnBadge.Content = "Ecrire un badge";
-            btnEcrireUnBadge.Visibility = Visibility.Visible;
-
-            write = false;
-            blank = false;
-
-            txtMessage.Text = "";
-            badgeMessage = "";
-
-            lblErreur.Content = "Passez un badge devant le lecteur";
-        }
-
-        private void btnWrite_Click(object sender, RoutedEventArgs e)
-        {
-            if (!write)
-            {
-                spEcrire.Visibility = Visibility.Hidden;
-                lblBadge.Content = "Veuillez présenter un badge...";
-                lblBadge.FontSize = 16;
-
-                lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#ff0000"));
-
-                write = true;
-
-                btnEcrireUnBadge.Content = "Annuler";
-                btnEcrireUnBadge.Visibility = Visibility.Visible;
-
-                lblErreur.Content = "";
-            }
-        }
+        
     }
 }
