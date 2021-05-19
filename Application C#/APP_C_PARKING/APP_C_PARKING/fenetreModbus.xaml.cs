@@ -123,7 +123,7 @@ namespace APP_C_PARKING
                         lblBadge.FontSize = 16;
                         lblBadge.Content = "non connecté";
                         lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cccccc"));
-                        lblErreur.Content = "Indiquez l'adresse IP de votre lecteur RFID puis cliquez sur \"connecter\"";
+                        
 
                         btnConnecter.Content = "Connecter";
                     }
