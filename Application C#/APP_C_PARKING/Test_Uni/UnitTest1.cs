@@ -7,6 +7,8 @@ namespace Test_Uni
     public class UnitTest1
     {
         [TestMethod]
+
+        //test unitaire class Connexion 
         public void TestMethod_recup_info_badge()
         {
             Connexion co = new Connexion();
