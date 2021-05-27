@@ -37,9 +37,11 @@ namespace APP_C_PARKING
         protected delegate void Invoker(string message);
 
         private string IP = "10.16.37.11";
+        Connexion connexion_sql;
 
-        public fenetreModbus()
+        public fenetreModbus(Connexion connexion_sql)
         {
+            this.connexion_sql = connexion_sql; 
             InitializeComponent();
 
             timer = new DispatcherTimer();
@@ -250,6 +252,24 @@ namespace APP_C_PARKING
             ushort hex = Convert.ToUInt16("0x00", 16);
             return hex;
         }
-        
+
+        // add users 
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            Add_user add_user = new Add_user(connexion_sql);
+            add_user.Set_TextBox_Badge(badgeMessage);
+            add_user.ShowDialog();
+
+        }
+
+        private void delete_Click(object sender, RoutedEventArgs e)
+        {
+            connexion_sql.delete_user(badgeMessage);
+        }
+
+        private void suspension_Click(object sender, RoutedEventArgs e)
+        {
+            connexion_sql.suspension(badgeMessage);
+        }
     }
 }

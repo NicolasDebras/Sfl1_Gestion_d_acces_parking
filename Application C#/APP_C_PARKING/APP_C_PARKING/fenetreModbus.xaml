@@ -15,8 +15,8 @@
         <StackPanel Name="spEcrire" Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="40,325,40,0" VerticalAlignment="Top"/>
 
         <Label Name="lblErreur" Margin="0,0,0,40" Content="-" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center" Height="26" VerticalAlignment="Bottom" Background="{DynamicResource {x:Static SystemColors.InfoBrushKey}}"/>
-        <Button x:Name="add" Content="Ajouter" HorizontalAlignment="Left" Margin="124,234,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="delete" Content="Suppression" HorizontalAlignment="Left" Margin="266,234,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="suspension" Content="Suspension" HorizontalAlignment="Left" Margin="406,234,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="add" Content="Ajouter" HorizontalAlignment="Left" Margin="124,234,0,0" VerticalAlignment="Top" Width="75" Click="add_Click"/>
+        <Button x:Name="delete" Content="Suppression" HorizontalAlignment="Left" Margin="266,234,0,0" VerticalAlignment="Top" Width="75" Click="delete_Click"/>
+        <Button x:Name="suspension" Content="Suspension" HorizontalAlignment="Left" Margin="406,234,0,0" VerticalAlignment="Top" Width="75" Click="suspension_Click"/>
     </Grid>
 </Window>

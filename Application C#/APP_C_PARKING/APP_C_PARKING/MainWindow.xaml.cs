@@ -69,7 +69,7 @@ namespace APP_C_PARKING
 
         private void rfid_Click(object sender, RoutedEventArgs e)
         {
-            fenetreModbus fenetre = new fenetreModbus();
+            fenetreModbus fenetre = new fenetreModbus(connexion_sql);
             fenetre.ShowDialog();
         }
     }
