@@ -36,7 +36,6 @@ namespace UnitTestProject1
         {
             Connexion co = new Connexion();
             co.add_user("debras", "nicolas", "555555", "user");
-            co.recup_info_badge();
             bool n = co.verification("555555");
             Assert.AreEqual(n, false);
         }
@@ -49,7 +48,6 @@ namespace UnitTestProject1
         {
             Connexion co = new Connexion();
             co.delete_user("555555");
-            co.recup_info_badge();
             bool n = co.verification("555555");
             Assert.AreEqual(n, true);
 

@@ -38,6 +38,7 @@ namespace APP_C_PARKING
         }
         public string recup_info_badge()
         {
+            list_badge.Clear();
             string name;
             string prenom;
  
@@ -76,6 +77,7 @@ namespace APP_C_PARKING
                 cmd.Parameters.Add("@etat", MySqlDbType.VarChar).Value = 1;
 
                 int test = cmd.ExecuteNonQuery();
+                recup_info_badge();
             }
             catch (Exception e)
             {
@@ -102,6 +104,7 @@ namespace APP_C_PARKING
                 string query = "DELETE FROM `utilisateur` WHERE `utilisateur`.`badge` = "+badge+"";
                 MySqlCommand cmd = new MySqlCommand(query, connexion);
                 int test = cmd.ExecuteNonQuery();
+                recup_info_badge();
             }
             catch(Exception e)
             {
