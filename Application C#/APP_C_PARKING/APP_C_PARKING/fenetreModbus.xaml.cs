@@ -88,7 +88,7 @@ namespace APP_C_PARKING
         }
 
         //btn connexion 
-        private void btnConnecter_Click(object sender, RoutedEventArgs e)
+        public void btnConnecter_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -218,7 +218,7 @@ namespace APP_C_PARKING
             MBmaster.ReadHoldingRegister(ID, unit, StartAddress, Length);
         }
 
-        private void lireBadge()
+        public void lireBadge()
         {
             ushort ID = 1;
 
