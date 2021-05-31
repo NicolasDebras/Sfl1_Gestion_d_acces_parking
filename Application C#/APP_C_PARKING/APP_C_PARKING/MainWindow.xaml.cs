@@ -28,16 +28,7 @@ namespace APP_C_PARKING
         public MainWindow()
         {
             InitializeComponent();
-            try {
-                connexion_sql = new Connexion();
-            }
-            catch (Exception e)
-            {
-
-                Console.WriteLine("Error: " + e);
-                Console.WriteLine(e.StackTrace);
-            }
-            
+            connexion_sql = new Connexion();
             
         }
         private void add_Click(object sender, RoutedEventArgs e)

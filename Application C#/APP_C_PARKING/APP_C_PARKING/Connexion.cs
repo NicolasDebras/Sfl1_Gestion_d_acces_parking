@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace APP_C_PARKING
 {
@@ -19,7 +20,7 @@ namespace APP_C_PARKING
         public Connexion()
         {
 
-            String connexionString = "SERVER=127.0.0.1; DATABASE=parking; UID=root; PASSWORD="; 
+            String connexionString = "SERVER=127.0.0.1; DATABASE=parkingg; UID=root; PASSWORD="; 
 
             try
             {
@@ -28,10 +29,10 @@ namespace APP_C_PARKING
                 list_badge = new List<string>();
                 list_user = new List<string>();
                 list_id = new List<string>();
+                recup_info_badge();
             } catch (Exception e) {
 
-                Console.WriteLine("Error: " + e);
-                Console.WriteLine(e.StackTrace);
+                System.Windows.Forms.MessageBox.Show("Connexion mauvaise");
             }
 
         }

@@ -57,7 +57,7 @@ namespace APP_C_PARKING
         }
         public void Set_TextBox_Badge(string badge)
         {
-            TextBox_badge.Text = badge;s
+            TextBox_badge.Text = badge;
         }
     }
 }

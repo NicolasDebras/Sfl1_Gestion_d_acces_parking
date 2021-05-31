@@ -56,12 +56,14 @@ namespace APP_C_PARKING
             write = false;
             blank = false;
 
-            lblStatus.Visibility = Visibility.Hidden;
-            spEcrire.Visibility = Visibility.Hidden;
+            //lblStatus.Visibility = Visibility.Hidden;
+            //spEcrire.Visibility = Visibility.Hidden;
+            suspension.Visibility = Visibility.Visible;
 
-            lblBadge.FontSize = 16;
+
+
             lblBadge.Content = "non connecté";
-            lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cccccc"));    
+                
             lblErreur.Content = "Indiquez l'adresse IP de votre lecteur RFID puis cliquez sur \"connecter\"";
 
             //connecter();
@@ -74,10 +76,6 @@ namespace APP_C_PARKING
             if (!write)
             {
                 lireBadge();
-
-                lblBadge.FontSize = 48;
-                lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#0000ff"));
-
                 if (blank) lblBadge.Content = "";
                 else lblBadge.Content = badgeMessage;
             }
@@ -119,14 +117,7 @@ namespace APP_C_PARKING
 
                     if (!isConnected)
                     {
-                        lblStatus.Visibility = Visibility.Hidden;
-                        
-
-                        lblBadge.FontSize = 16;
-                        lblBadge.Content = "non connecté";
-                        lblBadge.Foreground = (SolidColorBrush)(new BrushConverter().ConvertFrom("#cccccc"));
-                        
-
+                        lblStatus.Visibility = Visibility.Hidden;                   
                         btnConnecter.Content = "Connecter";
                     }
                 }

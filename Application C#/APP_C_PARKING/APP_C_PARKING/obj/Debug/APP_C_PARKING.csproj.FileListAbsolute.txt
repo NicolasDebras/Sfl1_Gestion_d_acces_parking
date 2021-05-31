@@ -57,3 +57,8 @@ C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#
 C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\fenetreModbus.baml
 C:\Users\Nicolas\Documents\code\repo\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\fenetreModbus.g.cs
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\fenetreModbus.baml
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\obj\Debug\fenetreModbus.g.cs
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\ModbusTCP.dll
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\System.Threading.Tasks.Dataflow.dll
+C:\Users\nicolas.debras\Documents\GitHub\Sfl1_Gestion_d_acces_parking\Application C#\APP_C_PARKING\APP_C_PARKING\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
