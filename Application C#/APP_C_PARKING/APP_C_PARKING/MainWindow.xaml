@@ -43,7 +43,7 @@
                 <ImageBrush ImageSource="rfid.png" Stretch="UniformToFill"/>
             </Button.OpacityMask>
         </Button>
-        <Button x:Name="liste" Grid.ColumnSpan="3" Content="LISTE UTILISATEUR" Grid.Column="5" HorizontalAlignment="Left" Margin="32.4,92,0,0" VerticalAlignment="Top" Width="208" Height="36"/>
+        <Button x:Name="liste" Grid.ColumnSpan="3" Content="LISTE UTILISATEUR" Grid.Column="5" HorizontalAlignment="Left" Margin="32.4,92,0,0" VerticalAlignment="Top" Width="208" Height="36" Click="liste_Click"/>
 
     </Grid>
 </Window>

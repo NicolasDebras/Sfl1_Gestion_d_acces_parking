@@ -63,5 +63,11 @@ namespace APP_C_PARKING
             fenetreModbus fenetre = new fenetreModbus(connexion_sql);
             fenetre.ShowDialog();
         }
+
+        private void liste_Click(object sender, RoutedEventArgs e)
+        {
+            ListUser list = new ListUser(connexion_sql);
+            list.ShowDialog();
+        }
     }
 }
